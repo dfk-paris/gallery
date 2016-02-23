@@ -1,0 +1,37 @@
+{
+  "name": "kor_gallery",
+  "version": "0.0.1",
+  "description": "== README",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deps": "./build.sh deps",
+    "deps:watch": "onchange node_modules/ -- npm run deps",
+    "lib": "cat lib/*.js.coffee | coffee --bare --compile --stdio > tmp/lib.js",
+    "lib:watch": "onchange lib/ -- npm run lib",
+    "tags": "riot tags/ tmp/tags.js --colors",
+    "tags:watch": "onchange tags/ -- npm run tags",
+    "bundle": "cat tmp/deps.js tmp/lib.js tmp/tags.js boot.js > public/app.js",
+    "bundle:watch": "onchange tmp/deps.js tmp/lib.js tmp/tags.js -- npm run bundle",
+    "build": "npm run deps && npm run lib && npm run tags && npm run bundle",
+    "watch": "npm run build && parallelshell 'npm run deps:watch' 'npm run lib:watch' 'npm run tags:watch' 'npm run bundle:watch'",
+    "pack": "npm run build && cat tmp/deps.js tmp/lib.js tmp/tags.js > tmp/kor_gallery.min.js",
+    "upload": "npm run pack && scp tmp/kor_gallery.min.js root@192.168.30.214:/var/storage/host/static/current/public/kor_gallery.min.js",
+    "server": "cd public; python -m SimpleHTTPServer 8000;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "author": "Moritz Schepp <moritz.schepp@gmail.com>",
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "coffee-script": "^1.10.0",
+    "node-sass": "^3.4.2",
+    "onchange": "^2.0.0",
+    "parallelshell": "^2.0.0",
+    "riot": "^2.3.15",
+    "uglify-js": "^2.6.1",
+    "zepto": "^1.0.1"
+  }
+}

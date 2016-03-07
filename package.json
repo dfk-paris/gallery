@@ -17,7 +17,7 @@
     "watch": "npm run build && parallelshell 'npm run deps:watch' 'npm run lib:watch' 'npm run tags:watch' 'npm run bundle:watch'",
     "pack": "npm run build && cat tmp/deps.js tmp/lib.js tmp/tags.js > tmp/kor_gallery.min.js",
     "upload": "npm run pack && scp tmp/kor_gallery.min.js root@192.168.30.214:/var/storage/host/static/current/public/kor_gallery.min.js",
-    "server": "cd public; python -m SimpleHTTPServer 8000;"
+    "server": "cd public; python -m SimpleHTTPServer 3000;"
   },
   "repository": {
     "type": "git",

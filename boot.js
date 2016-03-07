@@ -1,1 +1,3 @@
+var jQuery = $;
+
 riot.mount('*');

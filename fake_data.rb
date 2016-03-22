@@ -74,13 +74,13 @@ image_urls = [
     'normal' => "https://schepp-is.s3.amazonaws.com/kor-gallery/173.original.jpeg"
   },{
     'type' => 'video',
-    'thumbnail' => 'https://testing-2-0.coneda.net/content_types/video/mp4.gif',
+    'thumbnail' => 'https://static.dfkg.org/public/loeb/video.png',
     'video/mp4' => "https://testing-2-0.coneda.net/media/images/mp4/000/000/081/document.mp4",
     'video/webm' => "https://testing-2-0.coneda.net/media/images/webm/000/000/081/document.webm",
     'video/ogg' => "https://testing-2-0.coneda.net/media/images/ogg/000/000/081/document.ogv"
   },{
     'type' => 'audio',
-    'thumbnail' => 'https://testing-2-0.coneda.net/content_types/audio/mpeg.gif',
+    'thumbnail' => 'https://static.dfkg.org/public/loeb/audio.png',
     'audio/mp3' => 'https://testing-2-0.coneda.net/media/images/mp3/000/000/087/document.mp3',
     'audio/ogg' => 'https://testing-2-0.coneda.net/media/images/ogg/000/000/087/document.ogg'
   }
@@ -95,6 +95,7 @@ data = image_urls.map do |url|
     'fotographer' => Faker::Name.name,
     'copyright' => Faker::Company.name,
     'people_on_medium' => (rand * 5).to_i.times.map{ Faker::Name.name },
+    'type' => url['type'],
     'urls' => url
   }
 end

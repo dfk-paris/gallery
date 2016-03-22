@@ -1,0 +1,107 @@
+/*	css for dfk galery page	*/
+
+body {
+
+}
+
+.kor-gallery {
+	margin-top: 40px;
+}
+
+/* gallery-items */
+
+.kor-gallery .kor-item {
+	padding: 20px;
+	border: 1px solid rgb(141, 141, 141);
+	margin: 0 20px 20px 0;
+	transition: background 0.15s ease;
+}
+
+.kor-gallery .kor-item:hover {
+	background-color: #d5e3d5;
+}
+
+.kor-gallery .kor-image {
+	width: 265px;
+	height: 380px;
+}
+
+.kor-gallery .kor-video,
+.kor-gallery .kor-audio {
+	width: 265px;
+	height: 330px;
+}
+
+.kor-gallery .kor-image .kor-medium {
+	width: 225px;
+	height: 225px;
+}
+
+.kor-gallery .kor-video .kor-medium, 
+.kor-gallery .kor-audio .kor-medium {
+	width: 225px;
+	height: 126px;
+}
+
+.kor-gallery .kor-image .kor-medium a img {
+	max-width: 225px;
+	max-height: 225px;
+	width: auto !important;
+}
+
+.kor-gallery .kor-video .kor-medium a img,
+.kor-gallery .kor-audio .kor-medium a img {
+	max-width: 225px;
+	max-height: 126px;
+	width: auto !important;
+}
+
+.kor-audio audio {
+	width: 265px;
+	margin-top: 20px;
+}
+
+
+/* slide-view */
+
+.slide-content .kor-center-vertically {
+	width: 100%;
+	height: 100%;
+}
+
+.slide-content .kor-center-vertically img {
+	max-width: 100%;
+	max-height: 100%;
+	width: auto !important;
+}
+
+.slide-content p {
+	font-family: cera pro, Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	line-height: 18px;
+	margin-top: 2vh;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: center;
+}
+
+ol.indicator li {
+	padding: 0;
+}
+
+
+/* 2-column */
+@media screen and (max-width: 767px) {
+
+	.kor-gallery .kor-item {
+		float: left;
+	}
+
+	.kor-gallery .kor-item:nth-child(2n+1) {
+		margin-right: 0;
+	}
+
+	.kor-gallery .kor-item:nth-child(2n+2) {
+		clear: left;
+	}
+}

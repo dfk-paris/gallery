@@ -1,6 +1,6 @@
 <kor-gallery>
   <div class="kor-gallery">
-    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <div id={gid} class="blueimp-gallery blueimp-gallery-controls">
       <div class="slides"></div>
       <a class="prev">‹</a>
       <a class="next">›</a>
@@ -8,7 +8,7 @@
       <ol class="indicator"></ol>
     </div>
 
-    <div class="kor-item kor-{item.urls.type}" each={item in data} data-item-id={item.id}>
+    <div class="kor-item kor-{item.type}" each={item in data} data-item-id={item.id}>
       <div class="kor-medium">
         <a href={parent.item_url(item)}>
           <img src={item.urls.thumbnail} />
@@ -31,6 +31,7 @@
 
   <style type="text/scss">
     @import 'lib/blueimp-gallery.min';
+    @import 'lib/kor-gallery';
 
     .kor-gallery {
       .kor-item {
@@ -78,13 +79,16 @@
   <script type="text/coffee">
     self = this
 
+    self.gid = "blueimp-gallery-#{Math.floor(Math.random() * 10000000000)}"
+
     self.slide_image_tpl = '
       <div class="slide-content kor-image">
         <div class="kor-center-vertically">
           <img src={urls.thumbnail} />
           <p>
-            <strong>{title}</strong><br />
-            {dating}, {fotographer}<br />
+            <strong>Titre: </strong>{title}<br />
+            <strong>Date: </strong>{date}<br />
+            <strong>Photo: </strong>{photographer}<br />
             © {copyright}
           </p>
         </div>
@@ -145,6 +149,7 @@
           initial = i if e.id == item_id
 
         self.gallery = blueimp.Gallery(self.data,
+          container: "##{self.gid}"
           index: initial
           slideLoadingClass: 'kor-slide-loading'
           toggleControlsOnReturn: false

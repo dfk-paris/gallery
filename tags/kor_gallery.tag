@@ -20,8 +20,7 @@
           <strong>{item.fotographer}</strong>
         </div>
         <div>
-          {item.title}
-          <span if={item.dating}>({item.dating})</span>
+          {item.title}<span if={item.date}>, {item.date}</span>
         </div>
       </div>
     </div>
@@ -84,7 +83,7 @@
     self.slide_image_tpl = '
       <div class="slide-content kor-image">
         <div class="kor-center-vertically">
-          <img src={urls.thumbnail} />
+          <img src={urls.normal} />
           <p>
             <strong>Titre: </strong>{title}<br />
             <strong>Date: </strong>{date}<br />
@@ -104,7 +103,7 @@
           </audio>
           <p>
             <strong>{title}</strong><br />
-            {dating}, {fotographer}<br />
+            {date}, {fotographer}<br />
             © {copyright}
           </p>
         </div>
@@ -121,7 +120,7 @@
           </video>
           <p>
             <strong>{title}</strong><br />
-            {dating}, {fotographer}<br />
+            {date}, {fotographer}<br />
             © {copyright}
           </p>
         </div>

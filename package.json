@@ -16,7 +16,7 @@
     "build": "npm run deps && npm run lib && npm run tags && npm run bundle",
     "watch": "npm run build && parallelshell 'npm run deps:watch' 'npm run lib:watch' 'npm run tags:watch' 'npm run bundle:watch'",
     "pack": "npm run build && cat tmp/deps.js tmp/lib.js tmp/tags.js > tmp/kor_gallery.min.js",
-    "upload": "npm run pack && scp tmp/kor_gallery.min.js root@192.168.30.214:/var/storage/host/static/current/public/kor_gallery.min.js",
+    "upload": "npm run pack && scp public/app.js root@192.168.30.214:/var/storage/host/static/current/public/loeb/app.js",
     "server": "cd public; python -m SimpleHTTPServer 3000;"
   },
   "repository": {
@@ -30,8 +30,8 @@
     "node-sass": "^3.4.2",
     "onchange": "^2.0.0",
     "parallelshell": "^2.0.0",
-    "riot": "^2.3.15",
+    "riot": "^2.6.3",
     "uglify-js": "^2.6.1",
-    "zepto": "^1.0.1"
+    "zepto": "^1.2.0"
   }
 }

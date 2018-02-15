@@ -2,3 +2,4 @@ node_modules
 tmp
 public/app.js
 public/data.js
+npm-debug.log

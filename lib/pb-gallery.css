@@ -4,59 +4,59 @@ body {
 
 }
 
-.kor-gallery {
+.pb-gallery {
 	margin-top: 40px;
 }
 
 /* gallery-items */
 
-.kor-gallery .kor-item {
+.pb-gallery .pb-item {
 	padding: 20px;
 	border: 1px solid rgb(141, 141, 141);
 	margin: 0 20px 20px 0;
 	transition: background 0.15s ease;
 }
 
-.kor-gallery .kor-item:hover {
+.pb-gallery .pb-item:hover {
 	background-color: #d5e3d5;
 }
 
-.kor-gallery .kor-image {
+.pb-gallery .pb-image {
 	width: 265px;
 	height: 380px;
 }
 
-.kor-gallery .kor-video,
-.kor-gallery .kor-audio {
+.pb-gallery .pb-video,
+.pb-gallery .pb-audio {
 	width: 265px;
 	height: 330px;
 }
 
-.kor-gallery .kor-image .kor-medium {
+.pb-gallery .pb-image .pb-medium {
 	width: 225px;
 	height: 225px;
 }
 
-.kor-gallery .kor-video .kor-medium, 
-.kor-gallery .kor-audio .kor-medium {
+.pb-gallery .pb-video .pb-medium, 
+.pb-gallery .pb-audio .pb-medium {
 	width: 225px;
 	height: 126px;
 }
 
-.kor-gallery .kor-image .kor-medium a img {
+.pb-gallery .pb-image .pb-medium a img {
 	max-width: 225px;
 	max-height: 225px;
 	width: auto !important;
 }
 
-.kor-gallery .kor-video .kor-medium a img,
-.kor-gallery .kor-audio .kor-medium a img {
+.pb-gallery .pb-video .pb-medium a img,
+.pb-gallery .pb-audio .pb-medium a img {
 	max-width: 225px;
 	max-height: 126px;
 	width: auto !important;
 }
 
-.kor-audio audio {
+.pb-audio audio {
 	width: 265px;
 	margin-top: 20px;
 }
@@ -64,12 +64,12 @@ body {
 
 /* slide-view */
 
-.slide-content .kor-center-vertically {
+.slide-content .pb-center-vertically {
 	width: 100%;
 	height: 100%;
 }
 
-.slide-content .kor-center-vertically img {
+.slide-content .pb-center-vertically img {
 	max-width: 100%;
 	max-height: 100%;
 	width: auto !important;
@@ -93,15 +93,15 @@ ol.indicator li {
 /* 2-column */
 @media screen and (max-width: 767px) {
 
-	.kor-gallery .kor-item {
+	.pb-gallery .pb-item {
 		float: left;
 	}
 
-	.kor-gallery .kor-item:nth-child(2n+1) {
+	.pb-gallery .pb-item:nth-child(2n+1) {
 		margin-right: 0;
 	}
 
-	.kor-gallery .kor-item:nth-child(2n+2) {
+	.pb-gallery .pb-item:nth-child(2n+2) {
 		clear: left;
 	}
 }

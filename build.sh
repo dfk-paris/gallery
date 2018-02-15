@@ -8,4 +8,14 @@ function deps {
     -o tmp/deps.js
 }
 
+function tags {
+  riot tags/ tmp/tags.js
+}
+
+function app {
+  deps
+  tags
+  uglifyjs tmp/deps.js tmp/tags.js boot.js -o public/app.js
+}
+
 $1

@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ConedaKOR widgets test page</title>
+    <title>PB widgets test page</title>
     <meta charset="utf-8" />
   </head>
   <body>
-    <kor-gallery 
-      instance="https://testing-2-0.coneda.net"
-      data-url="https://static.dfkg.org/public/loeb/data.js"
-      page="2"
-    ></kor-gallery>
+    
+    <pb-gallery>
+      <pb-item
+        url="https://static.dfkg.org/public/loeb/images/thumbnail/0.jpg"
+        caption="This is awesome"
+      ></pb-item>
+
+      <pb-item
+        url="https://static.dfkg.org/public/loeb/images/thumbnail/1.jpg"
+        caption="This is awesome ... even more"
+      ></pb-item>
+
+      <pb-item
+        url="https://static.dfkg.org/public/loeb/images/thumbnail/0.jpg"
+        caption="This is awesome"
+      ></pb-item>
+
+      <pb-item
+        url="https://static.dfkg.org/public/loeb/images/thumbnail/1.jpg"
+      ></pb-item>
+
+      <pb-item
+        url="https://static.dfkg.org/public/loeb/images/thumbnail/0.jpg"
+        caption="This is awesome"
+      ></pb-item>
+
+      <pb-item
+        url="https://static.dfkg.org/public/loeb/images/thumbnail/1.jpg"
+        caption="This is awesome ... even more"
+        short-caption=".. but short .."
+      ></pb-item>
+    </pb-gallery>
 
     <script type="text/javascript" src="app.js"></script>
   </body>

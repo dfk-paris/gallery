@@ -1,3 +1,3 @@
 var jQuery = $;
 
-riot.mount('*');
+riot.mount('pb-gallery');
